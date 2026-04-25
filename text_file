@@ -1,161 +1,48 @@
 
 package com.spring.app;
 
-//Use appropriate annotations
+import org.springframework.stereotype.Component;
 
-public class ApplicationConfig {
+import org.springframework.beans.factory.annotation.*;
 
-//Use appropriate annotation
+import java.util.Map;
 
-@Bean
+import org.springframework.context.annotation.*;
 
-public Staff staff() {
-
-}
-
-// FILL THE CODE HERE
-
-return Staff();
-
-}
-
-//Use appropriate annotation
-
-@Bean
-
-public Department department() {
-
-NFILL THE CODE HERE
-
-return Department();
-
-}
-package com.spring.app;
-
-import java.util.List;
-
-//use appropriate annotation to make this class as component class
-
-@Component public class Department (
-
-private int departmentId;
-
-private List<Staff> staffs; public int getDepartmentId() {
-
-}
-
-return departmentId;
-
-public void setDepartmentId(int departmentId) {
-
-}
-
-this.departmentId= departmentId;
-
-public List<Staff> getStaffs() {
-
-return staffs;
-
-} public void setStaffs (List<Staff> staffs) {
-
-this.staffs = staffs;
-
-} /* Write a two argument constructor which accepts departmentId and List of
-
-staffs as the parameters
-
-public Department(int department Id, List<Staff> staffs){
-
-}
-
-this.departmentId=departmentId;
-
-this.staffs-staffs;
-
-public void displayStaffDetails() {
-
-/AFILL THE CODE HERE
-
-}
-
-}
-package com.spring.app;
-
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-public class Driver {
-
-public static Department loadStaffDetails() {
-
-// FILL THE CODE HERE
-
-}
-
-return null; }
-
-public static void main(String[] args) { I // THE
-
-}
-package com.spring.app;
-
-//use appropriate annotation to make this class as component class
+// import org.springframework.boot.properties.*;
 
 @Component
 
-public class Staff {
+//use appropriate ampotation to make this class as component class
 
-private int staffId;
+public class GoldRateInfo {
 
-private String staffName;
+//use appropriate annotation
 
-private String departmentName;
+// @PropertySource("classpath: goldratedetails.properties")
 
-private long contactNo;
+@Value("#{${gold.rate}}")
 
-public int getStaffId() {
+private Map<Integer, Double>rateInfo;
 
-return staffId;}
+public Map<Integer, Double> getRateInfo() {
 
-public void setStaffid(int staffId) {
+return rateInfo;
 
-this.staffId staffId;}
+} public void setRateInfo (Map<Integer, Double> rateInfo) {
 
-public String getStaffName() {
+this.rateInfo = rateInfo;
 
-public void setStaffName (String staffName) {
+{
 
-return staffName;}
+} public double calculateGoldRate(int goldCarat, double grams)
 
-this.staffName = staffName;)
+double totalRate=0.0;
 
-public String getDepartmentName() {
+//Fill the code here
 
-return departmentName;}
+totalRate-goldCarat*rateInfo.get(goldCarat);
 
-public void setDepartmentName(String departmentName) {
-
-public long getContactNo() {
-
-this.departmentName departmentName;}
-
-return contactNo;}
-
-public void setContactNo(long contactNo) {
-
-this.contactNo = contactNo;}
-
-/ Write a four argument constructor which accepts staffId, staffName, departmentName
-
-and contactNo as the parameters. */public Staff(int staffId, String staffName, String departmentName, long contactNo) {
-
-this.staffId=staffId;
-
-this.staffName-staffName;
-
-this.departmentName-departmentName;
-
-this.contactNo-contactNo;
-
-}
+return totalRate;
 
 }
