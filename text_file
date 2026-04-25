@@ -1,1 +1,161 @@
 
+package com.spring.app;
+
+//Use appropriate annotations
+
+public class ApplicationConfig {
+
+//Use appropriate annotation
+
+@Bean
+
+public Staff staff() {
+
+}
+
+// FILL THE CODE HERE
+
+return Staff();
+
+}
+
+//Use appropriate annotation
+
+@Bean
+
+public Department department() {
+
+NFILL THE CODE HERE
+
+return Department();
+
+}
+package com.spring.app;
+
+import java.util.List;
+
+//use appropriate annotation to make this class as component class
+
+@Component public class Department (
+
+private int departmentId;
+
+private List<Staff> staffs; public int getDepartmentId() {
+
+}
+
+return departmentId;
+
+public void setDepartmentId(int departmentId) {
+
+}
+
+this.departmentId= departmentId;
+
+public List<Staff> getStaffs() {
+
+return staffs;
+
+} public void setStaffs (List<Staff> staffs) {
+
+this.staffs = staffs;
+
+} /* Write a two argument constructor which accepts departmentId and List of
+
+staffs as the parameters
+
+public Department(int department Id, List<Staff> staffs){
+
+}
+
+this.departmentId=departmentId;
+
+this.staffs-staffs;
+
+public void displayStaffDetails() {
+
+/AFILL THE CODE HERE
+
+}
+
+}
+package com.spring.app;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class Driver {
+
+public static Department loadStaffDetails() {
+
+// FILL THE CODE HERE
+
+}
+
+return null; }
+
+public static void main(String[] args) { I // THE
+
+}
+package com.spring.app;
+
+//use appropriate annotation to make this class as component class
+
+@Component
+
+public class Staff {
+
+private int staffId;
+
+private String staffName;
+
+private String departmentName;
+
+private long contactNo;
+
+public int getStaffId() {
+
+return staffId;}
+
+public void setStaffid(int staffId) {
+
+this.staffId staffId;}
+
+public String getStaffName() {
+
+public void setStaffName (String staffName) {
+
+return staffName;}
+
+this.staffName = staffName;)
+
+public String getDepartmentName() {
+
+return departmentName;}
+
+public void setDepartmentName(String departmentName) {
+
+public long getContactNo() {
+
+this.departmentName departmentName;}
+
+return contactNo;}
+
+public void setContactNo(long contactNo) {
+
+this.contactNo = contactNo;}
+
+/ Write a four argument constructor which accepts staffId, staffName, departmentName
+
+and contactNo as the parameters. */public Staff(int staffId, String staffName, String departmentName, long contactNo) {
+
+this.staffId=staffId;
+
+this.staffName-staffName;
+
+this.departmentName-departmentName;
+
+this.contactNo-contactNo;
+
+}
+
+}
